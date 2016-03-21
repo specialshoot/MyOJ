@@ -36,7 +36,7 @@ public class LengthOfLongestSubstring {
 	}
 	
 	public static void main(String agrs[]){
-		String string="12312344";
+		String string="12312341235";
 		System.out.println( lengthOfLongestSubstring(string)+"");
 	}
 }

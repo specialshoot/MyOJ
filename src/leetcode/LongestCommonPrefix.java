@@ -4,13 +4,11 @@ public class LongestCommonPrefix {
 	// https://leetcode.com/problems/longest-common-prefix/
 	// 字符串数组最长公共前缀
 	public static String longestCommonPrefix(String[] strs) {
-
-		String result = "";
-		if (strs.length != 0) {
-			result = strs[0];
-		} else {
+		if (strs.length == 0) {
 			return "";
 		}
+		String result = "";
+		result = strs[0];
 		int length = strs.length;
 
 		int len = 0;
@@ -18,8 +16,7 @@ public class LongestCommonPrefix {
 			if (result.length() == 0 || strs[i].length() == 0) {
 				return "";
 			}
-			len = result.length() < strs[i].length() ? result.length()
-					: strs[i].length();
+			len = result.length() < strs[i].length() ? result.length() : strs[i].length();
 			int j = 0;
 			for (j = 0; j < len; j++) {
 				if (strs[i].charAt(j) != result.charAt(j)) {
