@@ -33,7 +33,7 @@ public class LongestIncreasingSubsequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] test = new int[] { 2, 1, 0 };
+		int[] test = new int[] { 100, 1, 99, 2, 60, 3 };
 		System.out.println(lengthOfLIS(test) + "");
 	}
 }

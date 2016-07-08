@@ -14,6 +14,7 @@ public class LengthOfLongestSubstring {
 		for(int i=0;i<128;i++){
 			exist[i]=false;
 			position[i]=0;
+			int a=position.length;
 		}
 	
 		for(int i=0;i<str.length();i++){
