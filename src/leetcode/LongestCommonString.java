@@ -13,7 +13,7 @@ public class LongestCommonString {
 		for (int i = 0; i <= str1.length(); i++) {
 			martix[i][0] = 0;
 		}
-		for (int j = 0; j < str2.length(); j++) {
+		for (int j = 0; j <= str2.length(); j++) {
 			martix[0][j] = 0;
 		}
 		for (int i = 1; i <= str1.length(); i++) {
@@ -54,8 +54,8 @@ public class LongestCommonString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str1 = "acgbfhk";
-		String str2 = "cegefkh";
+		String str1 = "abcdefghijklmnop";
+		String str2 = "abcsafjklmnopqrstuvw";
 		LCS(str1, str2);
 	}
 }
