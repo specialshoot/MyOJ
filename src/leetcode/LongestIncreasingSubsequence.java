@@ -28,12 +28,13 @@ public class LongestIncreasingSubsequence {
 			sub[i] = local + 1;// 当前点则是该局部最大上升长度加1
 			global = Math.max(global, sub[i]);// 更新全局最大上升长度
 		}
+		
 		return global;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] test = new int[] { 100, 1, 99, 2, 60, 3 };
+		int[] test = new int[] { 1,7,3,5,9,4,8};
 		System.out.println(lengthOfLIS(test) + "");
 	}
 }

@@ -56,7 +56,7 @@ public class Subway {
 		for (int i = 1; i < n; i++) {
 			double min = max;
 			for (int j = 0; j < n; j++){
-				if (fin[j] != 1){//如果还没有走过此路
+				if (fin[j] != 1){ //如果还没有走过此路
 					if (d[j] < min) {
 						v = j;
 						min = d[j];
