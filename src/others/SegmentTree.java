@@ -1,7 +1,7 @@
 package others;
 
 class SegmentTree {
-	
+
 	private class Segment {
 		int left;
 		int right;
@@ -46,28 +46,28 @@ class SegmentTree {
 			insert(root.leftChild, left, right);
 		} else if (left > rootMid) {
 			insert(root.rightChild, left, right);
-		}else{
+		} else {
 			insert(root.leftChild, left, rootMid);
-			insert(root.rightChild, rootMid+1, right);
+			insert(root.rightChild, rootMid + 1, right);
 		}
 	}
-	
-	public int caculateExistingTimes(int target) {  
-        return caculateExistingTimes(root, target);  
-    }
-      
-    //从根节点开始查找叶子结点[target, target]，对经过的节点的count求和  
-    private int caculateExistingTimes(Segment root, int target) {  
-    	int result=0;
-    	while(root.left!=root.right){
-    		int rootMid=root.left+(root.right-root.left)/2;
-    		result+=root.count;
-    		if(target<=rootMid){
-    			root=root.leftChild;
-    		}else if(target>rootMid) {
-				root=root.rightChild;
+
+	public int caculateExistingTimes(int target) {
+		return caculateExistingTimes(root, target);
+	}
+
+	// 从根节点开始查找叶子结点[target, target]，对经过的节点的count求和
+	private int caculateExistingTimes(Segment root, int target) {
+		int result = 0;
+		while (root.left != root.right) {
+			int rootMid = root.left + (root.right - root.left) / 2;
+			result += root.count;
+			if (target <= rootMid) {
+				root = root.leftChild;
+			} else if (target > rootMid) {
+				root = root.rightChild;
 			}
-    	}
-    	return result;
-    }
+		}
+		return result;
+	}
 }

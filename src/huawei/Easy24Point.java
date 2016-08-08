@@ -6,8 +6,7 @@ import java.util.Scanner;
 /**
  * http://blog.csdn.net/DERRANTCM/article/details/51473644
  * http://career-oj.huawei.com/exam/ShowProblemInfo?method=campusProblemInfo&id=
- * 2033 
- * 后缀表达式
+ * 2033 后缀表达式
  * 
  * @author han
  *

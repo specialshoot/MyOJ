@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * 尼科彻斯定理
+ * 
  * @author han
  *
  */

@@ -6,17 +6,17 @@ import java.util.HashSet;
 import java.util.List;
 
 public class FourSum {
-	//https://leetcode.com/problems/4sum/
+	// https://leetcode.com/problems/4sum/
 
 	public static List<List<Integer>> fourSum(int[] nums, int target) {
 
 		HashSet<ArrayList<Integer>> hashSet = new HashSet<ArrayList<Integer>>();
 		List<List<Integer>> ret = new ArrayList<List<Integer>>();
-		
+
 		if (nums == null || nums.length < 4)
 			return ret;
 		Arrays.sort(nums); // 排序
-		
+
 		int len = nums.length;
 		for (int i = 0; i < len; i++) {
 			for (int j = i + 1; j < len; j++) {

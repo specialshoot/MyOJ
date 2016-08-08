@@ -80,13 +80,15 @@ public class LevelTraverseBinaryTree {
 			i++;
 			if (i == size) {// 一行最后一个元素,到了结尾
 				if (curNode.getData() != -1 && curNode.getLeft() == null && curNode.getRight() == null) {
-//					System.out.println("hehe -> "+curNode.getData()+" ; size -> "+size);
+					// System.out.println("hehe -> "+curNode.getData()+" ; size
+					// -> "+size);
 					break;// 均没有子节点
 				}
-//				System.out.println("hehe -> "+curNode.getData()+" ; size -> "+size);
-//				for(int tmp=0;tmp<nodeList.size();tmp++){
-//					System.out.println(nodeList.get(tmp).getData());
-//				}
+				// System.out.println("hehe -> "+curNode.getData()+" ; size ->
+				// "+size);
+				// for(int tmp=0;tmp<nodeList.size();tmp++){
+				// System.out.println(nodeList.get(tmp).getData());
+				// }
 				size = nodeList.size();
 				nodeList.add(new Node(-1));// 增加-1节点,到最后一个元素后,由于size=nodeList.size()没有变化,所以直接i==size,跳出循环
 			}

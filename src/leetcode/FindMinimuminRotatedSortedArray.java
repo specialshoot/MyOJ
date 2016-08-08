@@ -17,10 +17,10 @@ public class FindMinimuminRotatedSortedArray {
 			if (nums[l] < nums[m]) {
 				min = Math.min(nums[l], min);
 				l = m + 1;
-			} else{
+			} else {
 				min = Math.min(nums[m], min);
 				r = m - 1;
-			} 
+			}
 		}
 		min = Math.min(nums[r], min);
 		min = Math.min(nums[l], min);

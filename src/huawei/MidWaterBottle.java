@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * 汽水瓶
+ * 
  * @author han
  *
  */
@@ -28,7 +29,7 @@ public class MidWaterBottle {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int n = scanner.nextInt();
-			if(n==0){
+			if (n == 0) {
 				break;
 			}
 			System.out.println(getMax(n));

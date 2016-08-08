@@ -24,15 +24,15 @@ public class StringDistance {
 				return lengthA;
 			}
 
-			memoizedDistance = new int[lengthA+1][lengthB+1];
-			for(int i=0;i<=lengthA;i++){
-				for(int j=0;j<=lengthB;j++){
-					memoizedDistance[i][j]=-1;
+			memoizedDistance = new int[lengthA + 1][lengthB + 1];
+			for (int i = 0; i <= lengthA; i++) {
+				for (int j = 0; j <= lengthB; j++) {
+					memoizedDistance[i][j] = -1;
 				}
 			}
-			distance=calculateStringDistance(strA, 0, lengthA-1, strB, 0, lengthB-1);
+			distance = calculateStringDistance(strA, 0, lengthA - 1, strB, 0, lengthB - 1);
 		}
-		return 1.0/(distance+1);
+		return 1.0 / (distance + 1);
 	}
 
 	private int calculateStringDistance(String strA, int pABegin, int pAEnd, String strB, int pBBegin, int pBEnd) {
@@ -70,9 +70,9 @@ public class StringDistance {
 			int t1 = calculateStringDistance(strA, pABegin + 1, pAEnd, strB, pBBegin, pBEnd);
 			int t2 = calculateStringDistance(strA, pABegin, pAEnd, strB, pBBegin + 1, pBEnd);
 			int t3 = calculateStringDistance(strA, pABegin + 1, pAEnd, strB, pBBegin + 1, pBEnd);
-			
-			int temp=minValue(t1, t2, t3)+1;
-			memoizedDistance[pABegin][pABegin]=temp;
+
+			int temp = minValue(t1, t2, t3) + 1;
+			memoizedDistance[pABegin][pABegin] = temp;
 			return temp;
 		}
 	}

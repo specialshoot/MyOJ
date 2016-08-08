@@ -24,12 +24,12 @@ public class BestTimetoBuyAndSellStock {
 		int minPrice = prices[0]; // 最小价格初始化
 		int diff = prices[1] - prices[0];// 价格差
 		for (int i = 2; i < len; i++) {
-			minPrice = Math.min(prices[i-1], minPrice);
-			if(diff<prices[i]-minPrice){
-				diff=prices[i]-minPrice;
+			minPrice = Math.min(prices[i - 1], minPrice);
+			if (diff < prices[i] - minPrice) {
+				diff = prices[i] - minPrice;
 			}
 		}
-		if(diff<0){
+		if (diff < 0) {
 			return 0;
 		}
 		return diff;

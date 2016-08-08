@@ -3,7 +3,7 @@ package leetcode;
 public class ImplementStr {
 
 	// https://leetcode.com/problems/implement-strstr/
-	//Accept
+	// Accept
 	public static int strStr(String haystack, String needle) {
 		if (needle.length() == 0) {
 			return 0;

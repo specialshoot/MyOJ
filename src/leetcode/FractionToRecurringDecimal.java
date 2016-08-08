@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FractionToRecurringDecimal {
 
-	//https://leetcode.com/problems/fraction-to-recurring-decimal/
+	// https://leetcode.com/problems/fraction-to-recurring-decimal/
 	/**
 	 * Time Limit Exceeded 无法处理1234/9999这种
 	 * 

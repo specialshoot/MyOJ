@@ -4,7 +4,7 @@ import leetcode.MergeKSortedLists.ListNode;
 
 public class MergeTwoSortedLists {
 
-	//https://leetcode.com/problems/merge-two-sorted-lists/
+	// https://leetcode.com/problems/merge-two-sorted-lists/
 	public static class ListNode {
 		int val;
 		ListNode next;
@@ -15,7 +15,7 @@ public class MergeTwoSortedLists {
 	}
 
 	public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-		
+
 		if (l1 == null)
 			return l2;
 		if (l2 == null)

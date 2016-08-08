@@ -15,11 +15,11 @@ public class ThreeSum {
 		if (nums == null || nums.length < 3)
 			return ret;
 		Arrays.sort(nums); // 排序,自己写的话可以使用插入排序,这里我们用默认的
-		
+
 		int len = nums.length;
 		for (int i = 0; i < len - 2; i++) {
-			if (i > 0 && nums[i] == nums[i - 1]){
-				//如果相邻的数字相同,则说明有重复,只需提取一个进行find
+			if (i > 0 && nums[i] == nums[i - 1]) {
+				// 如果相邻的数字相同,则说明有重复,只需提取一个进行find
 				continue;
 			}
 			find(nums, i + 1, len - 1, nums[i]); // 寻找两个数与num[i]的和为0
@@ -29,9 +29,13 @@ public class ThreeSum {
 
 	/**
 	 * 寻找两个数与num[i]的和为0
-	 * @param num 	num数组
-	 * @param begin	开始搜索位置
-	 * @param end		结束搜索位置
+	 * 
+	 * @param num
+	 *            num数组
+	 * @param begin
+	 *            开始搜索位置
+	 * @param end
+	 *            结束搜索位置
 	 * @param target目标数字
 	 */
 	public static void find(int[] num, int begin, int end, int target) {
@@ -81,7 +85,7 @@ public class ThreeSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] numbers = { -1, 2,-1, 2, -1,2 };
+		int[] numbers = { -1, 2, -1, 2, -1, 2 };
 		System.out.println(threeSum(numbers));
 	}
 

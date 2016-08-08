@@ -34,26 +34,26 @@ public class GroupAnagrams {
 		}
 		return res;
 	}
-	
-	//一般的不好的方法:双循环 Time Limited
+
+	// 一般的不好的方法:双循环 Time Limited
 	public static List<List<String>> groupAnagrams2(String[] strs) {
-		int length=strs.length;
-		List<List<String>> res=new ArrayList<List<String>>();
-		boolean[] visited=new boolean[length];	//是否遍历过
-		for(int i=0;i<length;i++){
-			visited[i]=false;
+		int length = strs.length;
+		List<List<String>> res = new ArrayList<List<String>>();
+		boolean[] visited = new boolean[length]; // 是否遍历过
+		for (int i = 0; i < length; i++) {
+			visited[i] = false;
 		}
-		for(int i=0;i<length;i++){
-			if (visited[i]==true) {
+		for (int i = 0; i < length; i++) {
+			if (visited[i] == true) {
 				continue;
 			}
-			List<String> temp=new ArrayList<String>();
+			List<String> temp = new ArrayList<String>();
 			temp.add(strs[i]);
-			visited[i]=true;
-			for(int j=i+1;j<length;j++){
-				if(!visited[j] && isAnagram(strs[i], strs[j])){
+			visited[i] = true;
+			for (int j = i + 1; j < length; j++) {
+				if (!visited[j] && isAnagram(strs[i], strs[j])) {
 					temp.add(strs[j]);
-					visited[j]=true;
+					visited[j] = true;
 				}
 			}
 			Collections.sort(temp);

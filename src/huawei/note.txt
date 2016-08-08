@@ -8,3 +8,5 @@ EasyMaxPath 字串的连接最长路径查找(比较难)
 笔画 MidStroke(欧拉路径)
 注意：split分隔.如下String[] strs=str.split("\\.");
 MidSushu 素数伴侣：标准动态规划样题
+字符串应用截取 （和腾讯的一模一样！！！）求字符串倒序与源字符串的最长公共子序列（看！！！）
+统计每个月兔子的总数MidRabbitCount斐波那契数列

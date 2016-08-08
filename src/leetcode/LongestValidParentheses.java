@@ -6,7 +6,7 @@ public class LongestValidParentheses {
 	// https://leetcode.com/problems/longest-valid-parentheses/
 
 	public static int longestValidParentheses(String s) {
-		if (s == null || s.length() == 0){
+		if (s == null || s.length() == 0) {
 			return 0;
 		}
 		LinkedList<Integer> stack = new LinkedList<Integer>();
@@ -15,16 +15,16 @@ public class LongestValidParentheses {
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == '(') {
 				stack.push(i);
-				System.out.println("push -> "+i);
+				System.out.println("push -> " + i);
 			} else {
 				if (stack.isEmpty()) {
-					//如果栈为空,说明前面已经没有匹配,start重新赋值起始位置
+					// 如果栈为空,说明前面已经没有匹配,start重新赋值起始位置
 					start = i + 1;
 				} else {
 					stack.pop();
 					max = stack.isEmpty() ? Math.max(max, i - start + 1) : Math.max(max, i - stack.peek());
-					if(!stack.isEmpty())
-						System.out.println("i-stack.peek() -> "+ (i - stack.peek()));
+					if (!stack.isEmpty())
+						System.out.println("i-stack.peek() -> " + (i - stack.peek()));
 				}
 			}
 		}

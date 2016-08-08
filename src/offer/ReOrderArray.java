@@ -36,14 +36,15 @@ public class ReOrderArray {
 
 	/**
 	 * 插入
+	 * 
 	 * @param array
 	 */
 	public static void reOrderArray2(int[] array) {
 		for (int i = 1; i < array.length; i++) {
 			int tmp = array[i];
-			if (tmp % 2 == 1) {//奇数
-				for (int j = i; j > 0; j--) {//向前查找偶数
-					if (array[j - 1] % 2 == 0) {//偶数
+			if (tmp % 2 == 1) {// 奇数
+				for (int j = i; j > 0; j--) {// 向前查找偶数
+					if (array[j - 1] % 2 == 0) {// 偶数
 						int t = array[j];
 						array[j] = array[j - 1];
 						array[j - 1] = t;
@@ -51,15 +52,15 @@ public class ReOrderArray {
 				}
 			}
 		}
-		
-		for(int i=0;i<array.length;i++){
-			System.out.print(array[i]+" ");
+
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
 		}
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array = { 1,2, 3, 9,11,4, 5, 6, 7, 8 };
+		int[] array = { 1, 2, 3, 9, 11, 4, 5, 6, 7, 8 };
 		reOrderArray2(array);
 	}
 

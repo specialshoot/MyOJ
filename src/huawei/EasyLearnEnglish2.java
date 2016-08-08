@@ -7,11 +7,11 @@ public class EasyLearnEnglish2 {
 	private static String[] number = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
 			"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
 			"nineteen" };
-	private static String[] shangshi = { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
-			"eighty", "ninety" };
+	private static String[] shangshi = { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty",
+			"ninety" };
 
 	public static String toEnglish(long num) {
-		if(num>=10_000_000_000L){
+		if (num >= 10_000_000_000L) {
 			return "error";
 		}
 		long[] shuwei = new long[10];
@@ -47,7 +47,7 @@ public class EasyLearnEnglish2 {
 	}
 
 	private static String handleThree(long numlong) {
-		int num=(int)numlong;
+		int num = (int) numlong;
 		String temp = "";
 		if (num == 0) {
 			return "";

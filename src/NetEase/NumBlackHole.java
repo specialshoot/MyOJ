@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class NumBlackHole {
 
 	public static void getHole(int input) {
-		if(input%1111==0){
+		if (input % 1111 == 0) {
 			he(fen(input));
 			return;
 		}
-		while(input!=6174){
-			input=he(fen(input));
+		while (input != 6174) {
+			input = he(fen(input));
 		}
 	}
 
@@ -28,7 +28,7 @@ public class NumBlackHole {
 		Arrays.sort(a); // 从小到大排序
 		return a;
 	}
-	
+
 	public static int[] fenRes(int input) // 拆分4位数
 	{
 		int a[] = new int[4];
@@ -47,14 +47,14 @@ public class NumBlackHole {
 		Arrays.sort(a);
 		int max = a[3] * 1000 + a[2] * 100 + a[1] * 10 + a[0]; // 最大的四位数
 		int min = a[0] * 1000 + a[1] * 100 + a[2] * 10 + a[3]; // 最小四位数
-		int[] res=fenRes(max-min);
-		String maxString="";
-		String minString="";
-		String resString="";
-		for(int i=0;i<4;i++){
-			maxString+=a[3-i]+"";
-			minString+=a[i]+"";
-			resString+=res[i]+"";
+		int[] res = fenRes(max - min);
+		String maxString = "";
+		String minString = "";
+		String resString = "";
+		for (int i = 0; i < 4; i++) {
+			maxString += a[3 - i] + "";
+			minString += a[i] + "";
+			resString += res[i] + "";
 		}
 		System.out.println(maxString + " - " + minString + " = " + resString);
 		return max - min;

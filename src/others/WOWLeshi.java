@@ -1,4 +1,5 @@
 package others;
+
 /**
  * 在最近几场魔兽争霸赛中，赫柏对自己的表现都不满意。
  * 为了尽快提升战力，赫柏来到了雷鸣交易行并找到了幻兽师格丽，打算让格丽为自己的七阶幻兽升星。
@@ -48,7 +49,7 @@ public class WOWLeshi {
 			} else {
 				result = max / 5 - min / 5;
 			}
-			if(min%5==0){
+			if (min % 5 == 0) {
 				result++;
 			}
 		}

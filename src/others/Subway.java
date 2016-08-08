@@ -49,23 +49,23 @@ public class Subway {
 							/ 10000.0;
 
 		fin[0] = 1;
-		for (int i = 0; i < n; i++){
+		for (int i = 0; i < n; i++) {
 			d[i] = dis[0][i];
 		}
 		int v = 0;
 		for (int i = 1; i < n; i++) {
 			double min = max;
-			for (int j = 0; j < n; j++){
-				if (fin[j] != 1){ //如果还没有走过此路
+			for (int j = 0; j < n; j++) {
+				if (fin[j] != 1) { // 如果还没有走过此路
 					if (d[j] < min) {
 						v = j;
 						min = d[j];
 					}
 				}
 			}
-			fin[v] = 1;//v为局部最短路
-			for (int w = 0; w < n; w++){
-				if (fin[w] != 1 && (min + dis[v][w] < d[w])){
+			fin[v] = 1;// v为局部最短路
+			for (int w = 0; w < n; w++) {
+				if (fin[w] != 1 && (min + dis[v][w] < d[w])) {
 					d[w] = min + dis[v][w];
 				}
 			}

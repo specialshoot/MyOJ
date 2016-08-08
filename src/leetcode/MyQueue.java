@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class MyQueue {
 	Stack<Integer> stack = new Stack<Integer>();
-	List<Integer> list=new ArrayList<Integer>();
+	List<Integer> list = new ArrayList<Integer>();
 
 	public void push(int x) {
 		stack.push(x);

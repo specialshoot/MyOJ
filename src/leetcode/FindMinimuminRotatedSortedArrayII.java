@@ -5,7 +5,7 @@ public class FindMinimuminRotatedSortedArrayII {
 	// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 	// 元素有重复排序
 	// 与FindMinimuminRotatedSortedArray不同在于有重复,这是只要多写一个判断条件即可,让左边自加1
-	
+
 	// 二分法
 	public static int findMin(int[] nums) {
 		if (nums == null || nums.length == 0)

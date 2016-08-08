@@ -14,7 +14,7 @@ public class RemoveNthNodeFromEndOfList {
 	}
 
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
-		if(n==0){
+		if (n == 0) {
 			return head;
 		}
 		ListNode p1 = head;
@@ -52,7 +52,7 @@ public class RemoveNthNodeFromEndOfList {
 			if (p != null) {
 				p = p.next;
 			} else {
-				//n的个数大于head元素个数
+				// n的个数大于head元素个数
 				return head;
 			}
 		}

@@ -28,25 +28,25 @@ public class KPM {
 		}
 		return a;
 	}
-	
-	//与上面算法思路一致,换一种写法
+
+	// 与上面算法思路一致,换一种写法
 	public static int[] next2(String sub) {
 		int[] next = new int[sub.length()];
 		char[] c = sub.toCharArray();
 		int length = sub.length();
 		next[0] = -1;
-		int k=-1,j=0;
-		while(j<length-1){
-			if(k==-1 || c[j]==c[k]){
+		int k = -1, j = 0;
+		while (j < length - 1) {
+			if (k == -1 || c[j] == c[k]) {
 				++k;
 				++j;
-				if(c[j]==c[k]){
-					next[j]=next[k];
-				}else{
-					next[j]=k;
+				if (c[j] == c[k]) {
+					next[j] = next[k];
+				} else {
+					next[j] = k;
 				}
-			}else{
-				k=next[k];
+			} else {
+				k = next[k];
 			}
 		}
 		return next;

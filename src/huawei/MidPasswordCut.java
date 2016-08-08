@@ -1,48 +1,18 @@
-package note;
+package huawei;
 
 import java.util.Scanner;
 
 /**
- * http://blog.csdn.net/liu_005/article/details/51058486
- * 给定一个字符串s，你可以从中删除一些字符，使得剩下的串是一个回文串。如何删除才能使得回文串最长呢？
- * 输出需要删除的字符个数。
- * 
- * 输入描述:
- * 输入数据有多组，每组包含一个字符串s，且保证:1<=s.length<=1000.
- * 
- * 输出描述:
- * 对于每组数据，输出一个整数，代表最少需要删除的字符个数。
- * 
- * 输入例子:
- * abcda
- * google
- * 
- * 输出例子:
- * 2
- * 2
+ * 字符串运用-密码截取
  * 
  * @author han
  *
  */
+public class MidPasswordCut {
 
-/**
- * 找出最长公共子序列
- * 
- * @author han
- *
- */
-public class LCSRealiseTencent {
-
-	private static final int MAXLENGTH = 1000;
-	private static String maxSubstring = "";
-	private static Scanner scanner;
+	private static String maxSubstring = "";// 最长字串
 
 	private static void LCSLength(String input1, String input2, int[][] c, int[][] b) {
-		for (int i = 0; i < input1.length(); i++) {
-			for (int j = 0; j < input2.length(); j++) {
-				c[i][j] = 0;
-			}
-		}
 
 		// 将两个字符串转换成字符数组进行处理
 		char[] inputChar1 = input1.toCharArray();
@@ -92,20 +62,19 @@ public class LCSRealiseTencent {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 运用动态规划方法求解LCS时，需要一个数组记录当前的最长公共子序列，这里用c[][]表示
-		// 还需要一个数组记录搜索方向，这里用b[][]表示
-		int[][] c = new int[MAXLENGTH][MAXLENGTH];
-		int[][] b = new int[MAXLENGTH][MAXLENGTH];
-
-		scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			maxSubstring = "";
-			String input1 = scanner.nextLine();
-			String input2 = new StringBuffer(input1).reverse().toString();
-			int length = input1.length();
-			LCSLength(input1, input2, c, b);
-			int result = input1.length() - getMaxSubString(length, length, b, input1.toCharArray()).length();
+			String str1 = scanner.next();
+			String str2 = new StringBuffer(str1).reverse().toString();
+			int length = str1.length();
+			int[][] c = new int[length + 1][length + 1];
+			int[][] b = new int[length + 1][length + 1];
+			LCSLength(str1, str2, c, b);
+			int result = getMaxSubString(length, length, b, str1.toCharArray()).length();
 			System.out.println(result);
 		}
+		scanner.close();
 	}
+
 }

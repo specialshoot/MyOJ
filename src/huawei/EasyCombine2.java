@@ -1,8 +1,5 @@
 package huawei;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -13,7 +10,7 @@ public class EasyCombine2 {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
-			Set<Integer> set=new TreeSet<>();
+			Set<Integer> set = new TreeSet<>();
 			int m = scanner.nextInt();
 			for (int i = 0; i < m; i++) {
 				set.add(scanner.nextInt());
@@ -24,8 +21,8 @@ public class EasyCombine2 {
 				set.add(scanner.nextInt());
 			}
 			for (Integer i : set) {
-                System.out.print(i);
-            }
+				System.out.print(i);
+			}
 		}
 		scanner.close();
 	}

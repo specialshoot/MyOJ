@@ -1,4 +1,5 @@
 package others;
+
 /**
  * http://www.nowcoder.com/questionTerminal/15a0754021c342568c7487b43016ee9a
  * 绝域之门
@@ -41,19 +42,19 @@ import java.util.Scanner;
 public class DoorLeshi {
 
 	private static Scanner scanner;
-	static Comparator<Map.Entry<String, Integer>> cmp = new Comparator<Map.Entry<String, Integer>>() {//字典序排序Comparator
+	static Comparator<Map.Entry<String, Integer>> cmp = new Comparator<Map.Entry<String, Integer>>() {// 字典序排序Comparator
 		@Override
 		public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
 			// TODO Auto-generated method stub
 			return o1.getKey().compareTo(o2.getKey());
 		}
 	};
-	
-	private static String getResult(ArrayList<Map.Entry<String, Integer>> list,int n){
-		Collections.sort(list, cmp);//将字符串按照字典序排序
-		String f = "";//起始
-		String mid = "";//中间
-		String l = "";//结尾
+
+	private static String getResult(ArrayList<Map.Entry<String, Integer>> list, int n) {
+		Collections.sort(list, cmp);// 将字符串按照字典序排序
+		String f = "";// 起始
+		String mid = "";// 中间
+		String l = "";// 结尾
 		for (int i = 0; i < n; i++) {
 			if (list.get(i).getValue() > 1) {
 				f = f + list.get(i).getKey() + " ";
@@ -67,23 +68,23 @@ public class DoorLeshi {
 				list.get(i).setValue(list.get(i).getValue() - 1);
 			}
 		}
-		String res=f+mid+l;
+		String res = f + mid + l;
 		return res.trim();
 	}
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			ArrayList<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>();
-			int n=scanner.nextInt();
-			for(int i=0;i<n;i++){
-				String str=scanner.next();
-				int num=scanner.nextInt();
+			int n = scanner.nextInt();
+			for (int i = 0; i < n; i++) {
+				String str = scanner.next();
+				int num = scanner.nextInt();
 				Map.Entry<String, Integer> pair = new AbstractMap.SimpleEntry(str, num);
 				list.add(pair);
 			}
-			System.out.println(getResult(list,n));
+			System.out.println(getResult(list, n));
 		}
 	}
 

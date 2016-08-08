@@ -42,9 +42,9 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array={2,4,1,5,7,2};
+		int[] array = { 2, 4, 1, 5, 7, 2 };
 		quickSort(array);
-		for(int i=0;i<array.length;i++){
+		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
 		}
 	}

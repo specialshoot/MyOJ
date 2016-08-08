@@ -26,8 +26,7 @@ public class OrAndToday {
 
 	/*
 	 * 如果或要和加的运算结果相同，i在x的为0的位上可以是0，也可以是1；在x的为1的位上只能是0。
-	 * 所以x的二进制表示为0的位就是可用的“数位”，可以将k的二进制直接“映射”过去。而为1的位只能是0。
-	 * 这样就构建出了结果的二进制表示字符串。
+	 * 所以x的二进制表示为0的位就是可用的“数位”，可以将k的二进制直接“映射”过去。而为1的位只能是0。 这样就构建出了结果的二进制表示字符串。
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,20 +34,20 @@ public class OrAndToday {
 		while (scanner.hasNext()) {
 			int x = scanner.nextInt();
 			int k = scanner.nextInt();
-			StringBuilder res=new StringBuilder();
-            String k_bin=Integer.toString(k, 2);//二进制表示
-            int index=k_bin.length()-1;
-            while(k!=0){
-                if((x&1)==0){
-                    res.append(k_bin.charAt(index--));
-                    k/=2;
-                }else{
-                    res.append("0");
-                }
-                x>>>=1; //无符号右移，忽略符号位，空位都以0补齐
-            }
-            BigInteger num=new BigInteger(res.reverse().toString(), 2);
-            System.out.println(num);
+			StringBuilder res = new StringBuilder();
+			String k_bin = Integer.toString(k, 2);// 二进制表示
+			int index = k_bin.length() - 1;
+			while (k != 0) {
+				if ((x & 1) == 0) {
+					res.append(k_bin.charAt(index--));
+					k /= 2;
+				} else {
+					res.append("0");
+				}
+				x >>>= 1; // 无符号右移，忽略符号位，空位都以0补齐
+			}
+			BigInteger num = new BigInteger(res.reverse().toString(), 2);
+			System.out.println(num);
 		}
 	}
 }

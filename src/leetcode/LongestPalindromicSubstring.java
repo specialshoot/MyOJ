@@ -115,7 +115,7 @@ public class LongestPalindromicSubstring {
 	/************************** 华丽的分割线 ********************************/
 	// PASS!!!
 	// http://blog.csdn.net/soszou/article/details/37312317
-	//中心扩展法Time O(n^2) Space O(1)
+	// 中心扩展法Time O(n^2) Space O(1)
 	public static String longestPalindrome3(String s) {
 		if (s.isEmpty()) {
 			return null;
@@ -144,8 +144,7 @@ public class LongestPalindromicSubstring {
 
 	// [begin, end]
 	public static String helper(String s, int begin, int end) {
-		while (begin >= 0 && end <= s.length() - 1
-				&& s.charAt(begin) == s.charAt(end)) {
+		while (begin >= 0 && end <= s.length() - 1 && s.charAt(begin) == s.charAt(end)) {
 			begin--;
 			end++;
 		}

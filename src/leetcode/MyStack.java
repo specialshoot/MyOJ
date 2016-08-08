@@ -5,20 +5,22 @@ import java.util.Queue;
 
 public class MyStack {
 
-	//https://leetcode.com/problems/implement-stack-using-queues/
-	LinkedList<Integer> queue=new LinkedList<>();
-	LinkedList<Integer> temp=new LinkedList<>();
+	// https://leetcode.com/problems/implement-stack-using-queues/
+	LinkedList<Integer> queue = new LinkedList<>();
+	LinkedList<Integer> temp = new LinkedList<>();
+
 	// Push element x onto stack.
 	/**
 	 * 放到队头
+	 * 
 	 * @param x
 	 */
 	public void push(int x) {
-		while(!queue.isEmpty()){
+		while (!queue.isEmpty()) {
 			temp.offer(queue.poll());
 		}
 		queue.offer(x);
-		while(!temp.isEmpty()){
+		while (!temp.isEmpty()) {
 			queue.offer(temp.poll());
 		}
 	}

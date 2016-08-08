@@ -1,4 +1,5 @@
 package huawei;
+
 /**
  * iNOC 完全数计算
  */

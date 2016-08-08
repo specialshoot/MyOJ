@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MidMove {
 
 	public static void getLastPosition(String[] strings) {
-		int x=0,y=0;
+		int x = 0, y = 0;
 		int length = strings.length;
 		for (int i = 0; i < length; i++) {
 			int len = strings[i].trim().length();
@@ -23,7 +23,7 @@ public class MidMove {
 			}
 			switch (start) {
 			case "A":
-				x-=num;
+				x -= num;
 				break;
 			case "D":
 				x += num;
@@ -38,7 +38,7 @@ public class MidMove {
 				break;
 			}
 		}
-		System.out.println(x+","+y);
+		System.out.println(x + "," + y);
 	}
 
 	public static void main(String[] args) {

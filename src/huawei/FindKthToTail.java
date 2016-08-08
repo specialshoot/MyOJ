@@ -3,10 +3,10 @@ package huawei;
 import java.util.Scanner;
 
 public class FindKthToTail {
-	
+
 	public static class ListNode {
-		int       m_nKey;
-	    ListNode m_pNext;
+		int m_nKey;
+		ListNode m_pNext;
 	}
 
 	private static int findKthToTail(ListNode head, int k) {

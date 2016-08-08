@@ -22,9 +22,9 @@ import java.util.Stack;
 public class MidMatrixMul {
 
 	static class Point {
-		public int row;//行
-		public int col;//列
-		
+		public int row;// 行
+		public int col;// 列
+
 		public Point(int row, int col) {
 			super();
 			this.row = row;
@@ -38,7 +38,7 @@ public class MidMatrixMul {
 		int len = ch.length;
 		Stack<Point> pointStack = new Stack<>();
 		Point a, b;
-		int j=0;
+		int j = 0;
 		for (int i = 0; i < len; i++) {
 			if (ch[i] == ')' && pointStack.size() > 1) {// 遇到反括号出栈
 				a = pointStack.pop();// 获取栈顶元素,并使栈顶元素出栈
@@ -62,7 +62,7 @@ public class MidMatrixMul {
 			int n = scanner.nextInt();
 			Point[] points = new Point[n];
 			for (int i = 0; i < n; i++) {
-				points[i]=new Point(scanner.nextInt(), scanner.nextInt());
+				points[i] = new Point(scanner.nextInt(), scanner.nextInt());
 			}
 			String str = scanner.next();
 			System.out.println(getMul(n, points, str));

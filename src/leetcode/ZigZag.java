@@ -15,7 +15,7 @@ public class ZigZag {
 		int len = s.length();
 		for (int i = 0; i < len && i < numRows; ++i) {
 			int indx = i;
-			System.out.println(indx+"");
+			System.out.println(indx + "");
 			res += s.substring(indx, indx + 1);
 
 			for (int k = 0; indx < len; ++k) {
@@ -28,14 +28,14 @@ public class ZigZag {
 					if (k % 2 == 1) { // 奇数位
 						indx += 2 * (numRows - 1 - i);
 					} else {
-						//偶数位
+						// 偶数位
 						indx += 2 * i;
 					}
 				}
 
 				// 判断indx合法性
 				if (indx < len) {
-					System.out.println(indx+"");
+					System.out.println(indx + "");
 					res += s.substring(indx, indx + 1);
 				}
 			}

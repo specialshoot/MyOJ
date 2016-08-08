@@ -15,6 +15,7 @@ public class CountCompleteTreeNodes {
 
 	/**
 	 * 最简单的循环遍历，超时
+	 * 
 	 * @param root
 	 * @return
 	 */
@@ -28,6 +29,7 @@ public class CountCompleteTreeNodes {
 
 	/**
 	 * 可以先判断左右子树是否高度一致
+	 * 
 	 * @param root
 	 * @return
 	 */

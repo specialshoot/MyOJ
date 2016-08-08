@@ -18,8 +18,7 @@ public class GenerateParentheses {
 	}
 
 	// 深优递归
-	public static void dfs(ArrayList<String> result, String s, int left,
-			int right) {
+	public static void dfs(ArrayList<String> result, String s, int left, int right) {
 		if (left > right)
 			return;
 

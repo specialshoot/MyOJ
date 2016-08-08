@@ -4,8 +4,8 @@ import org.omg.CORBA.PRIVATE_MEMBER;
 
 public class LongestCommonString {
 
-	//最长公共子序列
-	//http://www.cnblogs.com/huangxincheng/archive/2012/11/11/2764625.html
+	// 最长公共子序列
+	// http://www.cnblogs.com/huangxincheng/archive/2012/11/11/2764625.html
 	private static void LCS(String str1, String str2) {
 
 		int[][] martix = new int[str1.length() + 1][str2.length() + 1];

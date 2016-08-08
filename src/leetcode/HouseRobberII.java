@@ -27,9 +27,9 @@ public class HouseRobberII {
 
 		for (int i = 1; i < len; i++) {
 			if (i <= 1) {
-				res[i] = Math.max(nums[start+i], res[i - 1]);
+				res[i] = Math.max(nums[start + i], res[i - 1]);
 			} else {
-				res[i] = Math.max(res[i - 2] + nums[start+i], res[i - 1]);
+				res[i] = Math.max(res[i - 2] + nums[start + i], res[i - 1]);
 			}
 		}
 		return res[len - 1];

@@ -3,8 +3,8 @@ package huawei;
 import java.util.Scanner;
 
 /**
- * 将真分数分解为埃及分数
- * 过oj
+ * 将真分数分解为埃及分数 过oj
+ * 
  * @author han
  *
  */
@@ -14,19 +14,19 @@ public class EasyEgypt {
 		String[] nums = pcRealFraction.split("/");
 		int a = Integer.parseInt(nums[0]);
 		int b = Integer.parseInt(nums[1]);
-		int c=0;
+		int c = 0;
 		String temp = "";
 		while (a != 1) {
 			if (a == 3) {
 				temp += "1/" + (b / 2) + "+1/" + b;
 				break;
 			}
-			c = b/a+1;
-			a = a*c-b;
-			b = b*c;
-			temp+="1/"+c+"+";
-			if( (b % a == 0) || (a==1) ){
-				temp+="1/"+(b/a);
+			c = b / a + 1;
+			a = a * c - b;
+			b = b * c;
+			temp += "1/" + c + "+";
+			if ((b % a == 0) || (a == 1)) {
+				temp += "1/" + (b / a);
 				a = 1;
 			}
 		}

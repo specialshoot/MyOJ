@@ -26,7 +26,7 @@ public class ReverseLinkedListII {
 		for (int i = 1; i < m && p != null; i++) {
 			p = p.next;
 		}
-		//此时p指向第m个元素的前一个元素
+		// 此时p指向第m个元素的前一个元素
 		if (p != null) {
 			ListNode q = p.next;
 			ListNode r;
@@ -49,19 +49,19 @@ public class ReverseLinkedListII {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ReverseLinkedListII rl=new ReverseLinkedListII();
-		ListNode l=new ListNode(0);
-		ListNode root=new ListNode(0);
-		root.next=l;
-		for(int i=1;i<6;i++){
-			l.next=new ListNode(i);
-			l=l.next;
+		ReverseLinkedListII rl = new ReverseLinkedListII();
+		ListNode l = new ListNode(0);
+		ListNode root = new ListNode(0);
+		root.next = l;
+		for (int i = 1; i < 6; i++) {
+			l.next = new ListNode(i);
+			l = l.next;
 		}
-		ListNode res=rl.reverseBetween(root.next, 2, 4);
-		if (res!=null) {
-			while(res.next!=null){
+		ListNode res = rl.reverseBetween(root.next, 2, 4);
+		if (res != null) {
+			while (res.next != null) {
 				System.out.println(res.val);
-				res=res.next;
+				res = res.next;
 			}
 		}
 	}

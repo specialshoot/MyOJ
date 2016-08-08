@@ -33,7 +33,7 @@ public class TwoStringsAreAnagrams {
 		return true;
 	}
 
-	//方法二.排序字符串
+	// 方法二.排序字符串
 	public static boolean anagram2(String s, String t) {
 		// write your code here
 		if (s.isEmpty() || t.isEmpty()) {
@@ -42,12 +42,12 @@ public class TwoStringsAreAnagrams {
 		if (s.length() != t.length()) {
 			return false;
 		}
-		char[] cs=s.toCharArray();
-		char[] ct=t.toCharArray();
+		char[] cs = s.toCharArray();
+		char[] ct = t.toCharArray();
 		Arrays.sort(cs);
 		Arrays.sort(ct);
-		for(int i=0;i<cs.length;i++){
-			if (cs[i]!=ct[i]) {
+		for (int i = 0; i < cs.length; i++) {
+			if (cs[i] != ct[i]) {
 				return false;
 			}
 		}

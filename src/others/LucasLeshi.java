@@ -1,4 +1,5 @@
 package others;
+
 /**
  * 卢卡斯的驱逐者大军已经来到了赫柏的卡诺萨城，赫柏终于下定决心,集结了大军,与驱逐者全面开战。
  * 卢卡斯的手下有6名天之驱逐者，这6名天之驱逐者各赋异能，是卢卡斯的主力。
@@ -53,8 +54,8 @@ public class LucasLeshi {
 			for (int i = 0; i < n; i++) {
 				strings[i] = scanner.next();
 			}
-			int res=getAns(strings,n);
-			System.out.println(res+"");
+			int res = getAns(strings, n);
+			System.out.println(res + "");
 		}
 		scanner.close();
 	}

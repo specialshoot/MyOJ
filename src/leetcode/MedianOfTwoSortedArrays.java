@@ -1,11 +1,10 @@
 package leetcode;
 
 public class MedianOfTwoSortedArrays {
-	//Hard!!!
-	//https://leetcode.com/problems/median-of-two-sorted-arrays/
-	//http://blog.csdn.net/yutianzuijin/article/details/11499917/
-	public double findKth(int a[], int startA, int m, int b[], int startB,
-			int n, int k) {
+	// Hard!!!
+	// https://leetcode.com/problems/median-of-two-sorted-arrays/
+	// http://blog.csdn.net/yutianzuijin/article/details/11499917/
+	public double findKth(int a[], int startA, int m, int b[], int startB, int n, int k) {
 		if (m > n)
 			return findKth(b, startB, n, a, startA, m, k);
 
@@ -35,13 +34,13 @@ public class MedianOfTwoSortedArrays {
 		int total = m + n;
 
 		if ((total & 1) == 1)
-			return findKth(nums1, 0, m,nums2, 0, n, total / 2 + 1);
+			return findKth(nums1, 0, m, nums2, 0, n, total / 2 + 1);
 		else
-			return (findKth(nums1, 0, m, nums2, 0, n, total / 2) + findKth(nums1,
-					0, m, nums2, 0, n, total / 2 + 1)) / 2;
+			return (findKth(nums1, 0, m, nums2, 0, n, total / 2) + findKth(nums1, 0, m, nums2, 0, n, total / 2 + 1))
+					/ 2;
 	}
-	
-	public static void main(String agrs[]){
-		
+
+	public static void main(String agrs[]) {
+
 	}
 }

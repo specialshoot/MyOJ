@@ -1,4 +1,5 @@
 package NetEase;
+
 /**
  * 小易经常沉迷于网络游戏.
  * 有一次,他在玩一个打怪升级的游戏,他的角色的初始能力值为 a.
@@ -27,42 +28,43 @@ package NetEase;
 import java.util.Scanner;
 
 public class YIUpgrade {
-	
+
 	/**
 	 * 递归求最大公约数
+	 * 
 	 * @param m
 	 * @param n
 	 * @return
 	 */
-    public static int maxCommonDivisor(int m, int n) {  
-        if (m < n) {// 保证m>n,若m<n,则进行数据交换  
-            int temp = m;  
-            m = n;  
-            n = temp;  
-        }  
-        if (m % n == 0) {// 若余数为0,返回最大公约数  
-            return n;  
-        } else { // 否则,进行递归,把n赋给m,把余数赋给n  
-            return maxCommonDivisor(n, m % n);  
-        }  
-    }  
+	public static int maxCommonDivisor(int m, int n) {
+		if (m < n) {// 保证m>n,若m<n,则进行数据交换
+			int temp = m;
+			m = n;
+			n = temp;
+		}
+		if (m % n == 0) {// 若余数为0,返回最大公约数
+			return n;
+		} else { // 否则,进行递归,把n赋给m,把余数赋给n
+			return maxCommonDivisor(n, m % n);
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scanner=new Scanner(System.in);
-		while(scanner.hasNext()){
-			int n=scanner.nextInt();
-			int able=scanner.nextInt();
-			int sum=able;
-			for(int i=0;i<n;i++){
-				int bi=scanner.nextInt();
-				if(bi<=sum){
-					sum+=bi;
-				}else{
-					sum+=maxCommonDivisor(sum,bi);
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNext()) {
+			int n = scanner.nextInt();
+			int able = scanner.nextInt();
+			int sum = able;
+			for (int i = 0; i < n; i++) {
+				int bi = scanner.nextInt();
+				if (bi <= sum) {
+					sum += bi;
+				} else {
+					sum += maxCommonDivisor(sum, bi);
 				}
 			}
-			System.out.println(sum+"");
+			System.out.println(sum + "");
 		}
 		scanner.close();
 	}

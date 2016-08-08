@@ -1,4 +1,5 @@
 package huawei;
+
 /**
  * 计算最少出列多少位同学，使得剩下的同学排成合唱队形
  * 说明：
@@ -37,7 +38,7 @@ public class EasySing {
 				}
 			}
 		}
-		
+
 		for (int i = n - 1; i >= 0; i--) {// 由右向左依次遍历
 			f2[i] = 1;// 至少有一个人符合条件，就是他自己。所以赋初值1.
 			for (int j = i + 1; j < n; j++) {
@@ -45,24 +46,24 @@ public class EasySing {
 					f2[i] = f2[j] + 1;
 			}
 		}
-		
-		for(int i=0;i<f1.length;i++){
-			System.out.print(f1[i]+" ");
+
+		for (int i = 0; i < f1.length; i++) {
+			System.out.print(f1[i] + " ");
 		}
 		System.out.println();
-		
-		for(int i=0;i<f2.length;i++){
-			System.out.print(f2[i]+" ");
+
+		for (int i = 0; i < f2.length; i++) {
+			System.out.print(f2[i] + " ");
 		}
 		System.out.println();
-		
-		int res=0;
-		for(int i=0;i<n;i++){
-			if(res<f1[i]+f2[i]-1){
-				res=f1[i]+f2[i]-1;
+
+		int res = 0;
+		for (int i = 0; i < n; i++) {
+			if (res < f1[i] + f2[i] - 1) {
+				res = f1[i] + f2[i] - 1;
 			}
 		}
-		return n-res;
+		return n - res;
 	}
 
 	public static void main(String[] args) {
@@ -78,7 +79,7 @@ public class EasySing {
 			for (int i = 0; i < n; i++) {
 				nums[i] = scanner.nextInt();
 			}
-			System.out.println(getSingNum(nums, n)+"");
+			System.out.println(getSingNum(nums, n) + "");
 		}
 		scanner.close();
 	}

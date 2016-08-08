@@ -6,15 +6,15 @@ import java.util.List;
 
 public class SubstringwithConcatenationOfAllWords {
 
-	//https://leetcode.com/problems/substring-with-concatenation-of-all-words/
-	//HARD!!!
+	// https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+	// HARD!!!
 	public static List<Integer> findSubstring(String s, String[] words) {
 		List<Integer> res = new ArrayList<Integer>();
 		if (s == null || s.length() == 0 || words == null || words.length == 0)
 			return res;
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		for (int i = 0; i < words.length; i++) {
-			//Hashmap记录个数
+			// Hashmap记录个数
 			if (map.containsKey(words[i])) {
 				map.put(words[i], map.get(words[i]) + 1);
 			} else {
