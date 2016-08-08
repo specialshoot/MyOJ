@@ -1,2 +1,8 @@
 称砝码 EasyWeight回来再看
 放苹果再看
+24point 24点
+EasyStringSimilar 计算字符串的相似度
+EasyEgypt 埃及数
+EasyMaxPath 字串的连接最长路径查找(比较难)
+最长上升子序列 leetcode LongestIncreasingSubsequence
+笔画 MidStroke(欧拉路径)

@@ -46,6 +46,16 @@ public class EasySing {
 			}
 		}
 		
+		for(int i=0;i<f1.length;i++){
+			System.out.print(f1[i]+" ");
+		}
+		System.out.println();
+		
+		for(int i=0;i<f2.length;i++){
+			System.out.print(f2[i]+" ");
+		}
+		System.out.println();
+		
 		int res=0;
 		for(int i=0;i<n;i++){
 			if(res<f1[i]+f2[i]-1){
@@ -70,6 +80,7 @@ public class EasySing {
 			}
 			System.out.println(getSingNum(nums, n)+"");
 		}
+		scanner.close();
 	}
 
 }
