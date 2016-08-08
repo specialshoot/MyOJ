@@ -6,3 +6,5 @@ EasyEgypt 埃及数
 EasyMaxPath 字串的连接最长路径查找(比较难)
 最长上升子序列 leetcode LongestIncreasingSubsequence
 笔画 MidStroke(欧拉路径)
+注意：split分隔.如下String[] strs=str.split("\\.");
+MidSushu 素数伴侣：标准动态规划样题
