@@ -1,14 +1,16 @@
 package others;
 
+import java.util.Scanner;
+
 public class StringDistance {
 
-	public int[][] memoizedDistance;// 记录子问题的解,0表示子问题未求解
+	public static int[][] memoizedDistance;// 记录子问题的解,0表示子问题未求解
 
-	private int minValue(int a, int b, int c) {
+	private static int minValue(int a, int b, int c) {
 		return a < b ? (a < c ? a : c) : (b < c ? b : c);
 	}
 
-	private double distanceInit(String strA, String strB) {
+	private static double distanceInit(String strA, String strB) {
 		int distance = -1;
 		if (strA != null && strB != null) {
 			int lengthA = strA.length();
@@ -35,7 +37,7 @@ public class StringDistance {
 		return 1.0 / (distance + 1);
 	}
 
-	private int calculateStringDistance(String strA, int pABegin, int pAEnd, String strB, int pBBegin, int pBEnd) {
+	private static int calculateStringDistance(String strA, int pABegin, int pAEnd, String strB, int pBBegin, int pBEnd) {
 
 		if (memoizedDistance[pABegin][pBBegin] >= 0) {
 			return memoizedDistance[pABegin][pBBegin];
@@ -78,9 +80,14 @@ public class StringDistance {
 	}
 
 	public static void main(String[] args) {
-		StringDistance distance = new StringDistance();
 		// TODO Auto-generated method stub
-		System.out.println(distance.distanceInit("abcdfef", "bcf"));
+		Scanner scanner=new Scanner(System.in);
+		while(scanner.hasNext()){
+			String str1=scanner.next();
+			String str2=scanner.next();
+			System.out.println(distanceInit(str1, str2));
+		}
+		scanner.close();
 	}
 
 }

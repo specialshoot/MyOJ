@@ -10,3 +10,7 @@ EasyMaxPath 字串的连接最长路径查找(比较难)
 MidSushu 素数伴侣：标准动态规划样题
 字符串应用截取 （和腾讯的一模一样！！！）求字符串倒序与源字符串的最长公共子序列（看！！！）
 统计每个月兔子的总数MidRabbitCount斐波那契数列
+MidMaze 迷宫问题 bfs
+MidArithmetic 寻找等差数列
+四则运算MidCompute(不简单)
+字符串距离一定要看MidDistanceString及others中StringDistance
