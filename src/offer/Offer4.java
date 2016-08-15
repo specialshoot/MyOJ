@@ -5,7 +5,7 @@ package offer;
  */
 import java.util.Scanner;
 
-public class ReplaceSpace {
+public class Offer4 {
 
 	public static String replaceSpace(StringBuffer str) {
 		if (str == null) {

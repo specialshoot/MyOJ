@@ -12,8 +12,17 @@ package offer;
  * @author han
  *
  */
-public class NumberOfOne {
+public class Offer10 {
 
+	/**
+	 * 把一个整数减去1，
+	 * 再和原整数做与运算，
+	 * 会把该整数最右边的一个1变成0.
+	 * 那么一个整数的二进制表示中有多少个1，就可以进行多少次运算。
+	 * 基于这种思路，我们可以写出这样的代码：
+	 * @param n
+	 * @return
+	 */
 	public static int NumberOf1(int n) {
 		int count = 0;
 		while (n != 0) {

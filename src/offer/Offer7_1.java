@@ -1,6 +1,5 @@
 package offer;
 
-import java.lang.Thread.State;
 import java.util.Stack;
 
 /**
@@ -9,14 +8,17 @@ import java.util.Stack;
  * @author han
  *
  */
-public class StackToArray {
+public class Offer7_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Solution test = new Solution();
+		test.push(1);
+		test.push(2);
+		System.out.println(test.pop());
 	}
 
-	public class Solution {
+	public static class Solution {
 		Stack<Integer> stack1 = new Stack<Integer>();
 		Stack<Integer> stack2 = new Stack<Integer>();
 
