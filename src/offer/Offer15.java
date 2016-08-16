@@ -1,14 +1,12 @@
 package offer;
 
-import java.util.ArrayList;
-
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
  * 
  * @author han
  *
  */
-public class FindKthToTail {
+public class Offer15 {
 
 	public ListNode FindKthToTail(ListNode head, int k) {
 		if (head == null || k <= 0) {

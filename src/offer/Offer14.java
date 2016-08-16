@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author han
  *
  */
-public class ReOrderArray {
+public class Offer14 {
 
 	public static void reOrderArray(int[] array) {
 		if (array == null || array.length == 0) {
@@ -60,7 +60,7 @@ public class ReOrderArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array = { 1, 2, 3, 9, 11, 4, 5, 6, 7, 8 };
+		int[] array = { 2, 2, 3, 9, 11, 4, 5, 6, 7, 8 };
 		reOrderArray2(array);
 	}
 

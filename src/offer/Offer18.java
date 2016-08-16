@@ -7,7 +7,7 @@ package offer;
  */
 import others.TreeNode;
 
-public class HasSubtree {
+public class Offer18 {
 
 	public static boolean isSubtree(TreeNode pRootA, TreeNode pRootB) {
 		if (pRootB == null)
