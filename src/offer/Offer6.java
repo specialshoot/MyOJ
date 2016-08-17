@@ -43,6 +43,7 @@ public class Offer6 {
 
 	/**
 	 * 为了验证算法是否正确打印前序比对
+	 * 
 	 * @param root
 	 */
 	public static void printPreOrder(TreeNode root) {
@@ -64,10 +65,10 @@ public class Offer6 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-        int[] preOrder={1,2,4,7,3,5,6,8};  
-        int[] inOrder={4,7,2,1,5,3,8,6};
-        TreeNode root=reConstructBinaryTree(preOrder, inOrder);
-        printPreOrder(root);//验证
+		int[] preOrder = { 1, 2, 4, 7, 3, 5, 6, 8 };
+		int[] inOrder = { 4, 7, 2, 1, 5, 3, 8, 6 };
+		TreeNode root = reConstructBinaryTree(preOrder, inOrder);
+		printPreOrder(root);// 验证
 	}
 
 }

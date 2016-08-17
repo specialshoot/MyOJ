@@ -32,9 +32,8 @@ public class Offer32 {
 
 	/************************ 华丽的分割线 *************************/
 	/**
-	 * 方法2
-	 * 编程之美
-	 * http://blog.csdn.net/sjf0115/article/details/8600599
+	 * 方法2 编程之美 http://blog.csdn.net/sjf0115/article/details/8600599
+	 * 
 	 * @param n
 	 * @return
 	 */

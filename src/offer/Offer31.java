@@ -2,6 +2,7 @@ package offer;
 
 /**
  * 连续子数组的最大和
+ * 
  * @author han
  *
  */

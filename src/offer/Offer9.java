@@ -19,7 +19,7 @@ public class Offer9 {
 	}
 
 	public static int fibonacci2(int n) {
-		int[] f = new int[2];//将之前计算的结果记录下来
+		int[] f = new int[2];// 将之前计算的结果记录下来
 		f[0] = 0;
 		f[1] = 1;
 		for (int i = 2; i <= n; i++) {

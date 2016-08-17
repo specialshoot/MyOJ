@@ -20,9 +20,12 @@ public class Offer25 {
 
 	/**
 	 * 
-	 * @param root 根
-	 * @param k 要求查找路径k值
-	 * @param nodes 记录过程节点stack
+	 * @param root
+	 *            根
+	 * @param k
+	 *            要求查找路径k值
+	 * @param nodes
+	 *            记录过程节点stack
 	 */
 	public static void findPath(BinaryTreeNode root, int k, Stack<Integer> nodes) {
 		if (root == null) {

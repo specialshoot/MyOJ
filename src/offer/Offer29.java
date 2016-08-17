@@ -118,7 +118,7 @@ public class Offer29 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr={3,2,4,5,6,7,2,3,4,5,4,4,4,4,5,4,4,4,4};
+		int[] arr = { 3, 2, 4, 5, 6, 7, 2, 3, 4, 5, 4, 4, 4, 4, 5, 4, 4, 4, 4 };
 		System.out.println(moreThanHalfNum(arr));
 	}
 

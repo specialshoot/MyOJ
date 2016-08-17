@@ -49,7 +49,7 @@ public class Offer23 {
 		t2.right = t5;
 		t3.left = t6;
 		t3.right = t7;
-		t7.right=t8;
+		t7.right = t8;
 		printFromTopToBottom(t1);
 	}
 

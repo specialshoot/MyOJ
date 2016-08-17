@@ -125,10 +125,10 @@ public class Offer30 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = { 4, 5, 1, 6, 2, 7, 3, 8 };
-//		arr = getLeastNumbers(arr, 4);
-//		for (int i = 0; i < arr.length; i++) {
-//			System.out.println(arr[i]);
-//		}
+		// arr = getLeastNumbers(arr, 4);
+		// for (int i = 0; i < arr.length; i++) {
+		// System.out.println(arr[i]);
+		// }
 		getLeastNumbers2(arr, 4);
 	}
 

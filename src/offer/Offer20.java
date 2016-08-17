@@ -1,8 +1,8 @@
 package offer;
 
 /**
- * 顺时针打印矩阵
- * http://blog.csdn.net/jsqfengbao/article/details/47210487
+ * 顺时针打印矩阵 http://blog.csdn.net/jsqfengbao/article/details/47210487
+ * 
  * @author han
  *
  */
@@ -19,12 +19,13 @@ public class Offer20 {
 
 	/**
 	 * 打印一个循环
+	 * 
 	 * @param array
 	 * @param start
 	 */
 	private void printOneCircle(int[][] array, int start) {
-		int columns = array[0].length;//行
-		int rows = array.length;//列
+		int columns = array[0].length;// 行
+		int rows = array.length;// 列
 		int endX = columns - 1 - start;
 		int endY = rows - 1 - start;
 		// 从左到右打印一行

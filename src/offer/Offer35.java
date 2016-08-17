@@ -4,8 +4,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * 第一个只出现一次的字符
- * 使用LinkedHashMap有序哈希表
+ * 第一个只出现一次的字符 使用LinkedHashMap有序哈希表
+ * 
  * @author han
  *
  */
