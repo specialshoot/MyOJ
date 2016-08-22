@@ -32,15 +32,40 @@ import java.util.Scanner;
  *
  */
 public class LCSRealiseTencent {
-
 	private static final int MAXLENGTH = 1000;
 	private static String maxSubstring = "";
 	private static Scanner scanner;
 
-	private static void LCSLength(String input1, String input2, int[][] c, int[][] b) {
-		for (int i = 0; i < input1.length(); i++) {
-			for (int j = 0; j < input2.length(); j++) {
-				c[i][j] = 0;
+	public static void main(String[] args) {
+		// 运用动态规划方法求解LCS时，需要一个数组记录当前的最长公共子序列，这里用c[][]表示
+		// 还需要一个数组记录搜索方向，这里用b[][]表示
+		int[][] c = new int[MAXLENGTH][MAXLENGTH];
+		int[][] b = new int[MAXLENGTH][MAXLENGTH];
+
+		scanner = new Scanner(System.in);
+
+		while (scanner.hasNext()) {
+			maxSubstring = "";// 为了保证上一次处理结果不影响本次处理，需要将该字符串置空
+
+			String input1 = scanner.nextLine();
+			String input2 = new StringBuffer(input1).reverse().toString();// 将输入字符串反转
+
+			int length1 = input1.length();
+			int length2 = input2.length();
+
+			LCSLength(input1, input2, c, b);
+
+			maxSubstring = getMaxSubString(length1, length2, b, input1.toCharArray());
+			System.out.println(maxSubstring);
+		}
+	}
+
+	// 找出最长公共子序列
+	public static void LCSLength(String input1, String input2, int[][] c, int[][] b) {
+		// 初始化c[][]
+		for (int m = 0; m < input1.length(); m++) {
+			for (int n = 0; n < input2.length(); n++) {
+				c[m][n] = 0;
 			}
 		}
 
@@ -50,13 +75,16 @@ public class LCSRealiseTencent {
 
 		for (int i = 1; i <= inputChar1.length; i++) {
 			for (int j = 1; j <= inputChar2.length; j++) {
-				if (inputChar1[i - 1] == inputChar2[j - 1]) {// 当两个字符相同时，取写对角的c加上1，且置b为0
+				if (inputChar1[i - 1] == inputChar2[j - 1])// 当两个字符相同时，取写对角的c加上1，且置b为0
+				{
 					c[i][j] = c[i - 1][j - 1] + 1;
 					b[i][j] = 0;
-				} else if (c[i - 1][j] >= c[i][j - 1]) {// 当两个字符不相同且正上方c大于左边c，则c等于正上方c加上1，且置b为1
+				} else if (c[i - 1][j] >= c[i][j - 1])// 当两个字符不相同且正上方c大于左边c，则c等于正上方c加上1，且置b为1
+				{
 					c[i][j] = c[i - 1][j];
 					b[i][j] = 1;
-				} else {// 当两个字符不相同且正上方c小于左边c，则c等于左边c加上1，且置b为-1
+				} else// 当两个字符不相同且正上方c小于左边c，则c等于左边c加上1，且置b为-1
+				{
 					c[i][j] = c[i][j - 1];
 					b[i][j] = -1;
 				}
@@ -64,16 +92,8 @@ public class LCSRealiseTencent {
 		}
 	}
 
-	/**
-	 * 返回最长公共序列
-	 * 
-	 * @param m
-	 * @param n
-	 * @param b
-	 * @param input1
-	 * @return
-	 */
-	private static String getMaxSubString(int m, int n, int[][] b, char[] input1) {
+	// 返回最长公共子序列
+	public static String getMaxSubString(int m, int n, int[][] b, char[] input1) {
 		if (m == 0 || n == 0) {
 			return "";
 		}
@@ -88,24 +108,5 @@ public class LCSRealiseTencent {
 		}
 
 		return maxSubstring;
-	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// 运用动态规划方法求解LCS时，需要一个数组记录当前的最长公共子序列，这里用c[][]表示
-		// 还需要一个数组记录搜索方向，这里用b[][]表示
-		int[][] c = new int[MAXLENGTH][MAXLENGTH];
-		int[][] b = new int[MAXLENGTH][MAXLENGTH];
-
-		scanner = new Scanner(System.in);
-		while (scanner.hasNext()) {
-			maxSubstring = "";
-			String input1 = scanner.nextLine();
-			String input2 = new StringBuffer(input1).reverse().toString();
-			int length = input1.length();
-			LCSLength(input1, input2, c, b);
-			int result = input1.length() - getMaxSubString(length, length, b, input1.toCharArray()).length();
-			System.out.println(result);
-		}
 	}
 }

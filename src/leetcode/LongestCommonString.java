@@ -1,7 +1,5 @@
 package leetcode;
 
-import org.omg.CORBA.PRIVATE_MEMBER;
-
 public class LongestCommonString {
 
 	// 最长公共子序列
