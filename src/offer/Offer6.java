@@ -38,6 +38,7 @@ public class Offer6 {
 		}
 		root.left = reConstructBinaryTree(preLeft, inLeft);
 		root.right = reConstructBinaryTree(preRight, inRight);
+		// System.out.println(root.val);//后序输出
 		return root;
 	}
 

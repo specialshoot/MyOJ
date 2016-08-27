@@ -18,7 +18,7 @@ public class MidArithmetic {
 		list = new ArrayList<>();
 		int count = 0;
 		for (int i = m; i < n; i++) {
-			//找到所有素数
+			// 找到所有素数
 			if (checkSuShu(i)) {
 				list.add(i);
 				count++;
@@ -29,8 +29,7 @@ public class MidArithmetic {
 		int max = 0;// 最大差元素数量
 		int sum = 1;
 		int[] out = new int[MAX];
-		for (int k = 1; k <= maxCha; k++) {//遍历每个可能的差值
-			
+		for (int k = 1; k <= maxCha; k++) {// 遍历每个可能的差值
 			for (int i = 0; i < count - 1; i++) {
 				int val = i;
 				res[0] = list.get(i);
@@ -41,6 +40,7 @@ public class MidArithmetic {
 						sum++;
 					}
 				}
+				// 差值为k的时候所有的值
 				if (max < sum) {// 全局
 					max = sum;
 					for (int ii = 0; ii < sum; ii++) {

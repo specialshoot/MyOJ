@@ -55,7 +55,6 @@ public class MidSushu {
 				nums[i] = scanner.nextInt();
 			}
 			System.out.println(countPrimePairs(nums));
-			;
 		}
 		scanner.close();
 	}

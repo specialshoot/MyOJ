@@ -16,3 +16,5 @@ MidArithmetic 寻找等差数列
 字符串距离一定要看MidDistanceString及others中StringDistance
 字典序 Comparator EasyBeautifulName
 求一句话中最多出现的词和最小出现的词:多个空格的split("\\s+"),LinkedHashmap,Entry,map.entrySet(),Comparator
+MidLongestSubString 最长公共字串(注意与最长公共子序列不同)
+NetEase/Dungeon dfs

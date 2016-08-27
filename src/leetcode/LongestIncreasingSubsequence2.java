@@ -17,10 +17,9 @@ public class LongestIncreasingSubsequence2 {
 		}
 		int len = nums.length;
 		int maxPointIndex = 0;
-		int[] bt = new int[len];
+		int[] bt = new int[len];//用于回溯
 		int[] sub = new int[len];// 某一位最大上升个数计数
 		for (int i = 0; i < len; i++) {
-
 			bt[i] = -1;
 		}
 		for (int i = 0; i < len; i++) {
