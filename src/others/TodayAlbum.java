@@ -2,7 +2,7 @@ package others;
 
 import java.util.Scanner;
 
-public class AlbumToday {
+public class TodayAlbum {
 
 	private static Scanner in;
 
@@ -40,6 +40,9 @@ public class AlbumToday {
 			if (yu != 0) {
 				sum++;
 				if (yu % 13 == 0 && (count - yu) == 1) {// 查看最后最后一张专辑的情况
+					// yu是最后一张专辑的歌曲数，如果yu是13的倍数，
+					// 为了不增加专辑的数量，我们可以考虑从倒数第二张专辑中借一首歌，
+					// 此时倒数第二张专辑的歌曲数是count-1，若(count-1)==yu，这种情况只能在多出一张专辑
 					sum++;
 				}
 			}

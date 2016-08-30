@@ -6,7 +6,7 @@ package others;
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
-public class CircleLeshi {
+public class LeshiCircle {
 
 	static Scanner scanner;
 

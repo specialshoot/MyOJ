@@ -39,7 +39,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-public class DoorLeshi {
+public class LeshiDoor {
 
 	private static Scanner scanner;
 	static Comparator<Map.Entry<String, Integer>> cmp = new Comparator<Map.Entry<String, Integer>>() {// 字典序排序Comparator
@@ -81,11 +81,12 @@ public class DoorLeshi {
 			for (int i = 0; i < n; i++) {
 				String str = scanner.next();
 				int num = scanner.nextInt();
-				Map.Entry<String, Integer> pair = new AbstractMap.SimpleEntry(str, num);
+				Map.Entry<String, Integer> pair = new AbstractMap.SimpleEntry<String, Integer>(str, num);
 				list.add(pair);
 			}
 			System.out.println(getResult(list, n));
 		}
+		scanner.close();
 	}
 
 }

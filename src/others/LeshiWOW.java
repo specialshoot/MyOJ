@@ -35,14 +35,14 @@ package others;
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
-public class WOWLeshi {
+public class LeshiWOW {
 
 	static Scanner scanner;
 
 	static int getCount(int a, int b) {
 		int result = 0;
-		int min = (int) Math.ceil(a / 0.95);// 升星最小付款（含小费）
-		int max = (int) Math.floor(a / 0.9);// 升星最大付款（含小费
+		int min = (int) Math.ceil(a / 0.95);// 升星最小付款（含小费）向上取整
+		int max = (int) Math.floor(a / 0.9);// 升星最大付款（含小费）向下取整
 		if (min <= b) {
 			if (max > b) {
 				result = b / 5 - min / 5;
@@ -56,13 +56,38 @@ public class WOWLeshi {
 		return result;
 	}
 
+	/**
+	 * 方法2
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	static int getCount2(int a, int b) {
+		int result = 0;
+		int min = (int) Math.ceil(a / 0.95);// 升星最小付款（含小费）向上取整
+		int max = (int) Math.floor(a / 0.9);// 升星最大付款（含小费）向下取整
+		if (min <= b) {
+			int start = min;
+			while (start <= max && start % 5 != 0) {
+				++start;
+			}
+			for (int i = start; i <= max && i <= b; i += 5) {
+				if (i % 5 == 0) {
+					++result;
+				}
+			}
+		}
+		return result;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		scanner = new Scanner(new BufferedInputStream(System.in));
 		while (scanner.hasNext()) {
 			int a = scanner.nextInt();
 			int b = scanner.nextInt();
-			System.out.println(getCount(a, b));
+			System.out.println(getCount2(a, b));
 		}
 	}
 
