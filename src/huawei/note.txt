@@ -18,3 +18,5 @@ MidArithmetic 寻找等差数列
 求一句话中最多出现的词和最小出现的词:多个空格的split("\\s+"),LinkedHashmap,Entry,map.entrySet(),Comparator
 MidLongestSubString 最长公共字串(注意与最长公共子序列不同)
 NetEase/Dungeon dfs
+others NowCoderTreeColorPath 求树的最长单色路径，递归
+MidShopping购物单 有条件的动态规划 王强 //http://www.nowcoder.com/practice/f9c6f980eeec43ef85be20755ddbeaf4?tpId=37&tqId=21239&rp=&ru=%2Fta%2Fhuawei&qru=%2Fta%2Fhuawei%2Fquestion-ranking
