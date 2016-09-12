@@ -1,40 +1,32 @@
 package sort;
 
-import java.util.Comparator;
+/**
+ * 冒泡
+ * @author han
+ *
+ */
+public class BubbleSorter {
 
-public class BubbleSorter implements Sorter {
-
-	@Override
-	public <T extends Comparable<T>> void sort(T[] list) {
-		// TODO Auto-generated method stub
-		boolean swapped = true;
-		for (int i = 1, len = list.length; i < len && swapped; ++i) {
-			swapped = false;
-			for (int j = 0; j < len - i; ++j) {
-				if (list[j].compareTo(list[j + 1]) > 0) {
-					T temp = list[j];
-					list[j] = list[j + 1];
-					list[j + 1] = temp;
-					swapped = true;
+	public static void bubbleSort(int[] a) {
+		int temp = 0;
+		int len=a.length-1;
+		for (int i = 0; i < len; i++) {
+			for (int j = 0; j < len - i; j++) {
+				if (a[j] > a[j + 1]) {
+					temp = a[j];
+					a[j] = a[j + 1];
+					a[j + 1] = temp;
 				}
 			}
 		}
 	}
 
-	@Override
-	public <T> void sort(T[] list, Comparator<T> comp) {
-		// TODO Auto-generated method stub
-		boolean swapped = true;
-		for (int i = 1, len = list.length; i < len && swapped; ++i) {
-			swapped = false;
-			for (int j = 0; j < len - i; ++j) {
-				if (comp.compare(list[j], list[j + 1]) > 0) {
-					T temp = list[j];
-					list[j] = list[j + 1];
-					list[j + 1] = temp;
-					swapped = true;
-				}
-			}
+	public static void main(String[] args) {
+		int a[] = { 49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35,
+				25, 53, 51 };
+		bubbleSort(a);
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
 		}
 	}
 

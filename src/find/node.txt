@@ -1,0 +1,6 @@
+OrderSearch顺序查找 最简单的一个一个查找
+BinarySearch折半查找
+分块查找
+B树 B-树 B+树
+散列表Hash
+KMP算法

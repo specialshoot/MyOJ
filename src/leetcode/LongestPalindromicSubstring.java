@@ -83,7 +83,7 @@ public class LongestPalindromicSubstring {
 				longestStr = s.substring(i, i + 2);
 			}
 		}
-		printTable(table);
+		//printTable(table);
 		// condition for calculate whole table
 		for (int l = 3; l <= length; l++) {
 			for (int i = 0; i <= length - l; i++) {
@@ -153,7 +153,7 @@ public class LongestPalindromicSubstring {
 
 	public static void main(String agrs[]) {
 		String str = "BCCBP";
-		System.out.println(longestPalindrome3(str));
+		System.out.println(longestPalindrome2(str));
 	}
 
 }
